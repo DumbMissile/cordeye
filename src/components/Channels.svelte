@@ -6,27 +6,47 @@
 </script>
 
 <div class="channels">
-  <h4>{activeGuild}</h4>
-  {#each channels as channel}
-    <div class="channel" on:click={() => setActiveChannel(channel)}>
-      #{channel}
-    </div>
-  {/each}
+  <div class="top-box"></div>
+  <h4 style="margin-left:15%;margin-top:-25px;">{activeGuild}</h4>
+  <div class="channel-list">
+    {#each channels as channel}
+      <div class="channel" on:click={() => setActiveChannel(channel)}>
+        #{channel}
+      </div>
+    {/each}
+  </div>
   <div class="bottom-box"></div>
 </div>
 
 <style>
   .channels {
-    color:white;
+    display: flex;
+    flex-direction: column;
+    color: white;
     background: #2f3136;
-    width: 200px;
+    width: 250px;
+    height: 100vh;
+  }
+  .channel-list {
+    flex: 1;
+    overflow-y: auto;
   }
   .channel {
-    color:white;
+    margin-left: 5%;
+    color: white;
     cursor: pointer;
     padding: 5px;
   }
   .channel:hover {
     background: #424549;
+  }
+  .bottom-box {
+    height: 50px;
+    background: #1f2024;
+  }
+
+  .top-box {
+    height: 30px;
+    border-bottom: 1px solid #252525;
   }
 </style>

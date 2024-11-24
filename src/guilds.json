@@ -1,0 +1,72 @@
+{
+  "guilds": {
+    "skibidi sigmas": {
+      "channels": ["General", "Gifts", "Coal"],
+      "channelMessages": {
+        "General": [
+          {
+            "user": {
+              "nickname": "gooner",
+              "username": "Mark",
+              "profilePicture": "../images/gooner.png"
+              
+            },
+            "content": "im gooning"
+          },
+          {
+            "user": {
+              "nickname": "Chud",
+              "username": "chuddy",
+              "profilePicture": "../images/chud.png"
+            },
+            "content": "KYS"
+          }
+        ],
+        "Gifts": [],
+        "Coal": [{
+            "user": {
+              "nickname": "Chud",
+              "username": "Chuddy",
+              "profilePicture": "../images/chud.png"
+              
+            },
+            "content": "I'm leaking....."
+          }]
+
+      },
+      "users": [
+        {
+          "nickname": "Chud",
+          "username": "chuddy",
+          "profilePicture": "../images/chud.png"
+        },
+        {
+          "nickname": "gooner",
+          "username": "Mark",
+          "profilePicture": "../images/gooner.png"
+
+        }
+      ]
+    },
+    "ohio": {
+      "channels": ["General", "Gooning", "meow"],
+      "channelMessages": {
+        "General": [],
+        "Gooning": [],
+        "meow": []
+      },
+      "users": [
+        {
+          "nickname": "User1",
+          "username": "user1",
+          "profilePicture": ""
+        },
+        {
+          "nickname": "User2",
+          "username": "USR2",
+          "profilePicture": ""
+        }
+      ]
+    }
+  }
+}

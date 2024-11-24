@@ -4,40 +4,19 @@
   import Channels from './components/Channels.svelte';
   import Chat from './components/Chat.svelte';
   import UserList from './components/UserList.svelte';
-
-  let guilds = {
-    'skibidi sigmas': {
-      channels: ['General', 'Gifts', 'Coal'],
-      channelMessages: {
-        General: [
-          { user: 'Mark', content: 'im gooning' },
-          { user: 'Chud', content: 'KYS' },
-        ],
-        Gifts: [],
-        Coal: [],
-      },
-    },
-    'ohio': {
-      channels: ['General', 'Gooning', 'meow'],
-      channelMessages: {
-        General: [],
-        Gooning: [{user:'Mark',content:'i cant stop gooning'}],
-        meow: [],
-      },
-    },
-  };
-
+  import data from './guilds.json';
+  
+  let guilds = data.guilds;
   let activeGuild = 'skibidi sigmas';
   let activeChannel = 'General';
   let newMessage = '';
   let messages = guilds[activeGuild].channelMessages[activeChannel];
-  let users = ['Chud', 'Mark', 'You']; 
-  
+  let users = guilds[activeGuild].users;
   $: messages = guilds[activeGuild].channelMessages[activeChannel];
 
   function sendMessage() {
     if (newMessage.trim()) {
-      guilds[activeGuild].channelMessages[activeChannel].push({ user: 'You', content: newMessage });
+      guilds[activeGuild].channelMessages[activeChannel].push({ user: guilds[activeGuild].users[0], content: newMessage });
       messages=guilds[activeGuild].channelMessages[activeChannel]
       newMessage = ''; 
       scrollToBottom();
@@ -78,9 +57,11 @@
   :global(body) {
     background: #1f2024;
   }
+
   .container {
+    margin-top:-5px;
     display: flex;
-    height: 100vh;
+    height: 80vw;
   }
 </style>
 
@@ -101,5 +82,6 @@
     sendMessage={sendMessage} 
     handleKeyPress={handleKeyPress} 
   />
-  <UserList {users} />
+  <UserList users={guilds[activeGuild].users} />
 </div>
+

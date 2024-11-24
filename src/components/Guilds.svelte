@@ -9,27 +9,50 @@
 </script>
 
 <div class="guilds">
-  {#each Object.keys(guilds) as guild}
-    <div class="guild" on:click={() => handleGuildClick(guild)}>
-      {guild}
-    </div>
-  {/each}
+  <div class="guild-list">
+     <div style="border-bottom:1px solid #a1a1a1; border-radius:0%; " class="guild">
+        <p>home</p>
+     </div>
+    {#each Object.keys(guilds) as guild}
+      <div class="guild" on:click={() => handleGuildClick(guild)}>
+        <p>{guild}</p>
+      </div>
+    {/each}
+  </div>
   <div class="bottom-box"></div>
+  
 </div>
 
 <style>
+  p{
+    font-size:10px;
+  }
   .guilds {
-    width: 55px;
+    display: flex;
+    flex-direction: column;
+    width: 50px;
     background: #1f2024;
     color: white;
-    padding: 10px;
-    position: relative;
+    height: 100vh;
+    
+  }
+  .guild-list {
+    flex: 1;
+    overflow-y: auto;
   }
   .guild {
+    border-radius:50%; 
+    height:35px;
+    width:35px;
     cursor: pointer;
-    padding: 5px;
   }
   .guild:hover {
     background: #424549;
+  }
+  .bottom-box {
+    height: 55px;
+    width:80px;
+    margin-left:-20px;
+    background: #1a1a1a;
   }
 </style>
