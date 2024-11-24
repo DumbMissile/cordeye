@@ -61,7 +61,7 @@
   .container {
     margin-top:-5px;
     display: flex;
-    height: 80vw;
+    height: 100vh;
   }
 </style>
 

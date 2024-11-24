@@ -23,6 +23,7 @@
     background: #2f3136;
     color: white;
     border-radius: 5px;
+    height:100vh;
   }
   .user-item {
     display: flex;
