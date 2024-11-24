@@ -1,4 +1,3 @@
-
 <script>
   import { onMount } from 'svelte';
   import Guilds from './components/Guilds.svelte';
@@ -32,7 +31,7 @@
   let activeChannel = 'General';
   let newMessage = '';
   let messages = guilds[activeGuild].channelMessages[activeChannel];
-  let users = ['Chud', 'Jarty Cuck', 'You']; 
+  let users = ['Chud', 'Mark', 'You']; 
   
   $: messages = guilds[activeGuild].channelMessages[activeChannel];
 
@@ -44,7 +43,7 @@
       scrollToBottom();
     }
   }
-
+ 
   function handleKeyPress(event) {
     if (event.key === 'Enter') {
       event.preventDefault();
@@ -97,6 +96,7 @@
   />
   <Chat 
     {messages} 
+    activeChannel={activeChannel}
     bind:newMessage 
     sendMessage={sendMessage} 
     handleKeyPress={handleKeyPress} 

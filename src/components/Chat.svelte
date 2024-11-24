@@ -1,10 +1,9 @@
-
 <script>
   import { onMount } from 'svelte';
   export let messages;
   export let newMessage;
   export let sendMessage;
-
+  export let activeChannel
   function handleKeyPress(event) {
     if (event.key === 'Enter') {
       event.preventDefault();
@@ -25,7 +24,7 @@
 </script>
 
 <div class="chat">
-  <h2>Chat</h2>
+  <h2>{activeChannel}</h2>
   <div class="messages">
     {#each messages as { user, content }}
       <div class="message"><strong>{user}</strong><br> {content}</div><br>
