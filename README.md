@@ -1,1 +1,1 @@
-# cordeye
+a tool for discord.
