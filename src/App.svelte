@@ -53,6 +53,7 @@
   });
 </script>
 
+
 <style>
   :global(body) {
     background: #1f2024;
@@ -63,8 +64,10 @@
     display: flex;
     height: 100vh;
   }
+ :global(::-webkit-scrollbar) {
+    width: 0px;
+  }
 </style>
-
 
 
 <div class="container">

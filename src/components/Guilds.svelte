@@ -19,7 +19,7 @@
       </div>
     {/each}
   </div>
-  <div class="bottom-box"></div>
+  <div class="bottom-box"><button style="font-size:8px;margin:5% 25%;border-radius:50%;height:40px;width:40px;background:#424549;color:white;">discovery</button></div>
   
 </div>
 
@@ -34,11 +34,10 @@
     background: #1f2024;
     color: white;
     height: 100vh;
-    
   }
   .guild-list {
     flex: 1;
-    overflow-y: auto;
+    overflow-y: scroll;
   }
   .guild {
     border-radius:50%; 

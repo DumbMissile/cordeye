@@ -6,7 +6,7 @@
 <div class="users">
 
 <div class="top-box"></div>
-  <h5>Users</h5>
+  <h5 style="margin:5% 5%;">Users</h5>
   <ul>
     {#each users as user}
       <li class="user-item">
@@ -44,8 +44,6 @@
   }
   .top-box {
     height: 30px;
-    
-
     background: #36393f;
     border-bottom: 0.8px solid #252525;
   }
